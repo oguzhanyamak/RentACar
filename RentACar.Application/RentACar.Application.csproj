@@ -19,4 +19,9 @@
     <PackageReference Include="MediatR" Version="12.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Persistence\Core.Persistence.csproj" />
+    <ProjectReference Include="..\RentACar.Domain\RentACar.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

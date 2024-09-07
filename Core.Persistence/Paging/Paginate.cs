@@ -13,11 +13,12 @@ public class Paginate<TEntity>
         Items = Array.Empty<TEntity>();
     }
 
-    public int Size { get; set; }
+    public int From { get; set; }
     public int Index { get; set; }
+    public int Size { get; set; }
     public int Count { get; set; }
     public int Pages { get; set; }
     public IList<TEntity> Items { get; set; }
-    public bool HasPrevious => Index > 0;
-    public bool HasNext => Index + 1 < Pages;
+    public bool HasPrevious => Index - From > 0;
+    public bool HasNext => Index - From + 1 < Pages;
 }
