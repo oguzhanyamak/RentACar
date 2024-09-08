@@ -20,6 +20,8 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
 
         builder.HasQueryFilter(b => !b.DeletedDate.HasValue);
 
+        builder.HasMany(b => b.Models);
+
         //Brand[] brandSeeds = { new(id: Guid.NewGuid(), name: "BMW"), new(id: Guid.NewGuid(), name: "Mercedes") };
         //builder.HasData(brandSeeds);
     }

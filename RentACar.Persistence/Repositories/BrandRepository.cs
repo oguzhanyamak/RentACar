@@ -8,12 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentACar.Persistence.Repositories
+namespace RentACar.Persistence.Repositories;
+
+public class BrandRepository : EfRepositoryBase<Brand, Guid, BaseDbContext>, IBrandRepository
 {
-    public class BrandRepository : EfRepositoryBase<Brand, Guid, BaseDbContext>, IBrandRepository
+    public BrandRepository(BaseDbContext context) : base(context)
     {
-        public BrandRepository(BaseDbContext context) : base(context)
-        {
-        }
     }
 }
