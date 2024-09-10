@@ -18,6 +18,7 @@ public static class PersistenceServiceRegistration
     {
         services.AddDbContext<BaseDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("NPSQL")));
         services.AddScoped<IBrandRepository, BrandRepository>();
+        services.AddScoped<IModelRepository,ModelRepository>();
         return services;
     }
 }

@@ -12,8 +12,8 @@ using RentACar.Persistence.Contexts;
 namespace RentACar.Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20240908135749_mig_2")]
-    partial class mig_2
+    [Migration("20240909183032_mig_1")]
+    partial class mig_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
