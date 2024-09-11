@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Infrastructure", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Persistence", "Core.Persistence\Core.Persistence.csproj", "{29BCE745-620D-4C15-8BDB-FFE0CA51DF39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Application", "Core.Application\Core.Application.csproj", "{619AE542-FB5C-45E0-8494-C037044AE253}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Application", "Core.Application\Core.Application.csproj", "{619AE542-FB5C-45E0-8494-C037044AE253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.CrossCuttingConcerns", "Core.CrossCuttingConcerns\Core.CrossCuttingConcerns.csproj", "{0CCA7B20-D827-4D27-9F2A-6CBE9BC9DBCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{619AE542-FB5C-45E0-8494-C037044AE253}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{619AE542-FB5C-45E0-8494-C037044AE253}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{619AE542-FB5C-45E0-8494-C037044AE253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CCA7B20-D827-4D27-9F2A-6CBE9BC9DBCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CCA7B20-D827-4D27-9F2A-6CBE9BC9DBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CCA7B20-D827-4D27-9F2A-6CBE9BC9DBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CCA7B20-D827-4D27-9F2A-6CBE9BC9DBCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{F2B86AAF-88AC-4198-928D-A07ABAAD02F8} = {BC132D46-61C8-4729-8B26-96ACDD5E7C0C}
 		{29BCE745-620D-4C15-8BDB-FFE0CA51DF39} = {5720AB1A-7E2E-4845-BC26-B1A75F86CFA6}
 		{619AE542-FB5C-45E0-8494-C037044AE253} = {5720AB1A-7E2E-4845-BC26-B1A75F86CFA6}
+		{0CCA7B20-D827-4D27-9F2A-6CBE9BC9DBCF} = {5720AB1A-7E2E-4845-BC26-B1A75F86CFA6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBA14289-B900-4B84-BE02-4399ABEECC8D}
