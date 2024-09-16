@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Core.Application.Pipelines.Transaction;
 using MediatR;
 using RentACar.Application.Services.Repositories;
 using RentACar.Domain.Entities;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Application.Features.Brands.Commands.Create;
 
-public class CreateBrandCommand : IRequest<CreateBrandCommandResponse>
+public class CreateBrandCommand : IRequest<CreateBrandCommandResponse>,ITransactionalRequest
 {
     public string Name { get; set; }
 
