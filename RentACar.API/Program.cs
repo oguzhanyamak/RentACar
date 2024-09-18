@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddAplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddStackExchangeRedisCache(opt=> opt.Configuration = builder.Configuration.GetConnectionString("Redis"));
+//builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

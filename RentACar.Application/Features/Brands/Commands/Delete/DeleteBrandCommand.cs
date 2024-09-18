@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Core.Application.Pipelines.Caching;
 using MediatR;
 using RentACar.Application.Features.Brands.Commands.Update;
 using RentACar.Application.Services.Repositories;
@@ -11,11 +12,15 @@ using System.Threading.Tasks;
 
 namespace RentACar.Application.Features.Brands.Commands.Delete
 {
-    public class DeleteBrandCommand :IRequest<DeletedBrandResponse>
+    public class DeleteBrandCommand : IRequest<DeletedBrandResponse>, ICacheRemoverRequest
     {
         public Guid Id { get; set; }
 
+        public string? CacheKey => string.Empty;
 
+        public string? CacheGroupKey => "GetBrands";
+
+        public bool BypassCache => false;
 
         public class DeleteBrandCommandHandler : IRequestHandler<DeleteBrandCommand, DeletedBrandResponse>
         {
