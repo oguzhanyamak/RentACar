@@ -11,7 +11,7 @@ builder.Services.AddAplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddStackExchangeRedisCache(opt=> opt.Configuration = builder.Configuration.GetConnectionString("Redis"));
 //builder.Services.AddDistributedMemoryCache();
-
+builder.Services.AddHttpContextAccessor();//loggingBehavior içerisindeki contextaccessor için gereklidir.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

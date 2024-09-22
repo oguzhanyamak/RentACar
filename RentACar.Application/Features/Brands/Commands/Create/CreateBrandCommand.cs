@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Pipelines.Caching;
+using Core.Application.Pipelines.Logging;
 using Core.Application.Pipelines.Transaction;
 using MediatR;
 using RentACar.Application.Services.Repositories;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Application.Features.Brands.Commands.Create;
 
-public class CreateBrandCommand : IRequest<CreateBrandCommandResponse>, ITransactionalRequest, ICacheRemoverRequest
+public class CreateBrandCommand : IRequest<CreateBrandCommandResponse>, ITransactionalRequest, ICacheRemoverRequest,ILoggableRequest
 {
     public string Name { get; set; }
 

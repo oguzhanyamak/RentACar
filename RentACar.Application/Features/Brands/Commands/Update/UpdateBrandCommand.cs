@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Pipelines.Caching;
+using Core.Application.Pipelines.Logging;
 using MediatR;
 using RentACar.Application.Features.Brands.Rules;
 using RentACar.Application.Services.Repositories;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Application.Features.Brands.Commands.Update
 {
-    public class UpdateBrandCommand:IRequest<UpdateBrandResponse>,ICacheRemoverRequest
+    public class UpdateBrandCommand:IRequest<UpdateBrandResponse>,ICacheRemoverRequest, ILoggableRequest
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

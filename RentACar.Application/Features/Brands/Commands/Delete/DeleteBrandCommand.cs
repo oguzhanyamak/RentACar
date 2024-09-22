@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Application.Pipelines.Caching;
+using Core.Application.Pipelines.Logging;
 using MediatR;
 using RentACar.Application.Features.Brands.Commands.Update;
 using RentACar.Application.Services.Repositories;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace RentACar.Application.Features.Brands.Commands.Delete
 {
-    public class DeleteBrandCommand : IRequest<DeletedBrandResponse>, ICacheRemoverRequest
+    public class DeleteBrandCommand : IRequest<DeletedBrandResponse>, ICacheRemoverRequest, ILoggableRequest
     {
         public Guid Id { get; set; }
 
